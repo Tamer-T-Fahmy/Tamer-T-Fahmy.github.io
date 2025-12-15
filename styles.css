@@ -432,7 +432,7 @@ section {
 }
 
 .about-text strong {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .about-stats {
