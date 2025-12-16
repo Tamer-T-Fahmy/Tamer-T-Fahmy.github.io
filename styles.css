@@ -394,6 +394,10 @@ section {
     margin-bottom: 0;
 }
 
+.section-header-row .section-title::after {
+    margin: 1rem auto 0;
+}
+
 .section-toggle {
     position: absolute;
     right: 0;
