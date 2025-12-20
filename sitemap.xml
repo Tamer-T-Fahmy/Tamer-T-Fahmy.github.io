@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Homepage (includes all sections: About, AI Transformation, Career, Leadership, etc.) -->
+    <!-- Homepage -->
     <url>
         <loc>https://tamerfahmy.net/</loc>
         <lastmod>2024-12-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+    
+    <!-- Section: About -->
+    <url>
+        <loc>https://tamerfahmy.net/#about</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Section: AI Transformation -->
+    <url>
+        <loc>https://tamerfahmy.net/#ai-transformation</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Section: Career Journey -->
+    <url>
+        <loc>https://tamerfahmy.net/#career</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Section: Leadership Philosophy -->
+    <url>
+        <loc>https://tamerfahmy.net/#leadership</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Section: Publications -->
+    <url>
+        <loc>https://tamerfahmy.net/#publications</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Section: Articles -->
+    <url>
+        <loc>https://tamerfahmy.net/#articles</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Section: Contact -->
+    <url>
+        <loc>https://tamerfahmy.net/#contact</loc>
+        <lastmod>2024-12-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
     </url>
     
     <!-- Article: Is 2025 a Transition Year for Developers? -->
