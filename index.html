@@ -33,10 +33,19 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     
+    <!-- Preconnect for faster external resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/profile.jpg" as="image">
+    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- JSON-LD Structured Data (Person Schema) -->
     <script type="application/ld+json">
@@ -703,7 +712,7 @@
                     <p class="philosophy-quote">"Define success on your own terms, achieve it by your own rules, and build a life you're proud to live."</p>
                     <p class="philosophy-author">— Anne Sweeney</p>
                     <div class="philosophy-graphic">
-                        <img src="images/leadership/define-success.png" alt="Define Success - What does success look like, Start with WHY, Plan Execute Monitor Control">
+                        <img loading="lazy" src="images/leadership/define-success.jpg" alt="Define Success - What does success look like, Start with WHY, Plan Execute Monitor Control">
                     </div>
                     <div class="philosophy-concepts">
                         <div class="concept-item">
@@ -738,7 +747,7 @@
                     <p class="philosophy-quote">"Working hard for something you love is 'Passion' while working hard for something you don't love is 'Stress'"</p>
                     <p class="philosophy-subtitle">People don't find their passion by What they do, they find it by Why they do it!</p>
                     <div class="philosophy-graphic">
-                        <img src="images/leadership/passion.png" alt="Passion - Motivation, Long-term Success, Overcome Fear, Perseverance">
+                        <img loading="lazy" src="images/leadership/passion.jpg" alt="Passion - Motivation, Long-term Success, Overcome Fear, Perseverance">
                     </div>
                     <div class="philosophy-concepts">
                         <div class="concept-item">
@@ -771,7 +780,7 @@
                     <h3 class="philosophy-title">Focus on Impact</h3>
                     <p class="philosophy-quote">"Focus on impact, not motion!"</p>
                     <div class="philosophy-graphic">
-                        <img src="images/leadership/focus-impact.png" alt="Focus on Impact - Motion vs Progress, Short & Long term, Impact Dynamics">
+                        <img loading="lazy" src="images/leadership/focus-impact.jpg" alt="Focus on Impact - Motion vs Progress, Short & Long term, Impact Dynamics">
                     </div>
                     <div class="philosophy-concepts">
                         <div class="concept-item">
@@ -809,7 +818,7 @@
                     <h3 class="philosophy-title">Persistence</h3>
                     <p class="philosophy-quote">"The sky is not your limit... you are"</p>
                     <div class="philosophy-graphic">
-                        <img src="images/leadership/persistence.png" alt="Persistence - Embrace failure, Fail Fast, Move Fast, Infinite Game, Discipline">
+                        <img loading="lazy" src="images/leadership/persistence.jpg" alt="Persistence - Embrace failure, Fail Fast, Move Fast, Infinite Game, Discipline">
                     </div>
                     <div class="philosophy-concepts">
                         <div class="concept-item">
@@ -850,7 +859,7 @@
                     <h3 class="philosophy-title">Humbleness</h3>
                     <p class="philosophy-quote">"Be confident and bold while also being humble"</p>
                     <div class="philosophy-graphic">
-                        <img src="images/leadership/humbleness.png" alt="Humbleness - Open for Feedback, Dunning-Kruger, Servant Leadership, Vulnerability">
+                        <img loading="lazy" src="images/leadership/humbleness.jpg" alt="Humbleness - Open for Feedback, Dunning-Kruger, Servant Leadership, Vulnerability">
                     </div>
                     <div class="philosophy-concepts">
                         <div class="concept-item">
@@ -935,6 +944,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
