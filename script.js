@@ -93,7 +93,7 @@ function initSmoothScrolling() {
    ============================================= */
 function handleDirectUrlAccess() {
     const path = window.location.pathname.replace('/', '');
-    
+
     if (path && path !== '') {
         // Wait for page to fully load, then scroll to section
         setTimeout(() => {
@@ -110,7 +110,7 @@ function scrollToSection(sectionId) {
     if (target) {
         const navHeight = document.querySelector('.navbar').offsetHeight;
         const targetPosition = target.offsetTop - navHeight;
-        
+
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'

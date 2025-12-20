@@ -10,10 +10,10 @@
         (function() {
             var path = window.location.pathname;
             var validSections = ['about', 'ai-transformation', 'career', 'leadership', 'publications', 'articles', 'education', 'certifications', 'volunteering', 'contact'];
-            
+
             // Remove leading/trailing slashes
             var section = path.replace(/^\/|\/$/g, '');
-            
+
             // Check if it's a valid section
             if (validSections.includes(section)) {
                 // Redirect to homepage with section hash
