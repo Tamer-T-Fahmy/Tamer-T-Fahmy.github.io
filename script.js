@@ -93,19 +93,56 @@ function initSmoothScrolling() {
    ============================================= */
 function handleDirectUrlAccess() {
     // Handle clean URL paths (e.g., /about, /career)
-    const path = window.location.pathname.replace('/', '');
+    const path = window.location.pathname.replace(/^\//, '');
     
     // Handle hash-based URLs (e.g., /#about from 404 redirect)
     const hash = window.location.hash.replace('#', '');
     
-    const sectionId = path || hash;
+    const sectionId = hash || path; // Prioritize hash over path
     
     if (sectionId && sectionId !== '' && sectionId !== 'home') {
-        // Wait for page to fully load, then scroll to section and expand it
-        setTimeout(() => {
-            scrollToSection(sectionId, true); // true = auto-expand
-        }, 200);
+        // Use window.onload to ensure everything is fully loaded
+        if (document.readyState === 'complete') {
+            expandAndScrollToSection(sectionId);
+        } else {
+            window.addEventListener('load', () => {
+                expandAndScrollToSection(sectionId);
+            });
+        }
     }
+}
+
+/* =============================================
+   EXPAND AND SCROLL TO SECTION
+   ============================================= */
+function expandAndScrollToSection(sectionId) {
+    // Give extra time for all resources to load
+    setTimeout(() => {
+        const target = document.getElementById(sectionId);
+        if (target) {
+            // Expand the section
+            const button = target.querySelector('.section-toggle');
+            const sectionContent = target.querySelector('.section-content');
+            
+            if (button && sectionContent) {
+                button.classList.remove('collapsed');
+                sectionContent.classList.remove('collapsed');
+                target.classList.remove('collapsed');
+                button.setAttribute('aria-expanded', 'true');
+            }
+            
+            // Wait for expansion animation, then scroll
+            setTimeout(() => {
+                const navHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = target.offsetTop - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }, 150);
+        }
+    }, 300);
 }
 
 /* =============================================
