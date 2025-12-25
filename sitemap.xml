@@ -15,9 +15,30 @@
         </image:image>
     </url>
     
-    <!-- Section: About -->
+    <!-- Page: About (Standalone, Indexable) -->
     <url>
-        <loc>https://tamerfahmy.net/#about</loc>
+        <loc>https://tamerfahmy.net/about.html</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://tamerfahmy.net/images/TamerFahmy.jpg</image:loc>
+            <image:title>About Tamer Fahmy</image:title>
+            <image:caption>Tamer Fahmy - Global Head of Business Support Engineering at Meta</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Page: Career Journey (Standalone, Indexable) -->
+    <url>
+        <loc>https://tamerfahmy.net/career.html</loc>
+        <lastmod>2025-12-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Page: Leadership Philosophy (Standalone, Indexable) -->
+    <url>
+        <loc>https://tamerfahmy.net/leadership.html</loc>
         <lastmod>2025-12-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -28,23 +49,7 @@
         <loc>https://tamerfahmy.net/#ai-transformation</loc>
         <lastmod>2025-12-25</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Section: Career Journey -->
-    <url>
-        <loc>https://tamerfahmy.net/#career</loc>
-        <lastmod>2025-12-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Section: Leadership Philosophy -->
-    <url>
-        <loc>https://tamerfahmy.net/#leadership</loc>
-        <lastmod>2025-12-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.8</priority>
     </url>
     
     <!-- Section: Publications -->

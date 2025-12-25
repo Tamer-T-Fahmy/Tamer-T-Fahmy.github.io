@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting... | Tamer Fahmy</title>
     <script>
-        // GitHub Pages SPA redirect for clean URLs
-        // This handles direct access to URLs like /about, /career, etc.
+        // GitHub Pages redirect for clean URLs
+        // Handles direct access to URLs like /about, /career, /leadership
         (function() {
             var path = window.location.pathname;
-            var validSections = ['about', 'ai-transformation', 'career', 'leadership', 'publications', 'articles', 'education', 'certifications', 'volunteering', 'contact'];
+            
+            // Standalone pages (redirect to actual HTML files)
+            var standalonePages = {
+                'about': '/about.html',
+                'career': '/career.html',
+                'leadership': '/leadership.html'
+            };
+            
+            // Hash-based sections on index.html
+            var hashSections = ['ai-transformation', 'publications', 'articles', 'education', 'certifications', 'volunteering', 'contact'];
 
             // Remove leading/trailing slashes
             var section = path.replace(/^\/|\/$/g, '');
 
-            // Check if it's a valid section
-            if (validSections.includes(section)) {
-                // Redirect to homepage with section hash
+            // Check if it's a standalone page
+            if (standalonePages[section]) {
+                window.location.replace(standalonePages[section]);
+            }
+            // Check if it's a hash-based section
+            else if (hashSections.includes(section)) {
                 window.location.replace('/#' + section);
-            } else if (path === '/' || path === '') {
-                // Homepage
-                window.location.replace('/');
-            } else {
-                // Unknown path - redirect to homepage
+            }
+            // Homepage or unknown - redirect to homepage
+            else {
                 window.location.replace('/');
             }
         })();
