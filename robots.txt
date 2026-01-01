@@ -4,8 +4,27 @@
 User-agent: *
 Allow: /
 
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Disallow backup directories
+Disallow: /images/backup/
+
 # Sitemap location
 Sitemap: https://tamerfahmy.net/sitemap.xml
 
-# Crawl-delay (optional - be kind to crawlers)
-Crawl-delay: 10
+# Host preference
+Host: https://tamerfahmy.net
