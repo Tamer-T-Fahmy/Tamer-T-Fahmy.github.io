@@ -1,16 +1,63 @@
 # robots.txt for tamerfahmy.net
-# Allow all search engines to crawl the site
+# Optimized for all major search engines
+# Last updated: 2026-01-05
 
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Allow specific bots
+# Google Search
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
-User-agent: Bingbot
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-News
 Allow: /
 
+User-agent: Googlebot-Video
+Allow: /
+
+# Bing Search
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+
+User-agent: msnbot-media
+Allow: /images/
+
+# Yahoo Search
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+
+# Yandex (Russia)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Sogou (China)
+User-agent: Sogou
+Allow: /
+
+# Exabot (Europe)
+User-agent: Exabot
+Allow: /
+
+# Social Media Crawlers
 User-agent: LinkedInBot
 Allow: /
 
@@ -20,11 +67,43 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 
-# Disallow backup directories
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# AI Crawlers (for visibility in AI tools)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# SEO Tools
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+# Disallow backup directories and private assets
 Disallow: /images/backup/
 
 # Sitemap location
 Sitemap: https://tamerfahmy.net/sitemap.xml
 
-# Host preference
+# Host preference (canonical domain)
 Host: https://tamerfahmy.net
