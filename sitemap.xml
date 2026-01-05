@@ -16,14 +16,6 @@
         </image:image>
     </url>
 
-    <!-- Section: Executive Impact Snapshot -->
-    <url>
-        <loc>https://tamerfahmy.net/#impact-snapshot</loc>
-        <lastmod>2026-01-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.95</priority>
-    </url>
-
     <!-- Section: Executive Profile -->
     <url>
         <loc>https://tamerfahmy.net/#executive-profile</loc>
