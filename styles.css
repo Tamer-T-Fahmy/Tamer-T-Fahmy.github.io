@@ -2368,6 +2368,680 @@ section {
 }
 
 /* =============================================
+   EXECUTIVE IMPACT SNAPSHOT SECTION
+   ============================================= */
+.impact-snapshot {
+    background: var(--darker-bg);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.impact-snapshot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(6, 104, 225, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.executive-highlights {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.highlight-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.highlight-card:hover::before {
+    transform: scaleX(1);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(6, 104, 225, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.highlight-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.highlight-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.highlight-description {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+@media (max-width: 1200px) {
+    .executive-highlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .executive-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlight-value {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .executive-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   EXECUTIVE PROFILE SECTION
+   ============================================= */
+.executive-profile {
+    background: var(--dark-bg);
+    padding: 5rem 0;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.profile-text .lead {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.profile-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.profile-text strong {
+    color: var(--primary-color);
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =============================================
+   STRATEGIC FOCUS AREAS SECTION
+   ============================================= */
+.focus-areas {
+    background: var(--darker-bg);
+    padding: 5rem 0;
+}
+
+.focus-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.focus-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+    transform: scaleY(0);
+    transition: transform var(--transition-normal);
+}
+
+.focus-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.focus-card:hover::before {
+    transform: scaleY(1);
+}
+
+.focus-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.focus-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(6, 104, 225, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.focus-icon i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.focus-header h3 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.focus-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.focus-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .focus-areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   CASE STUDIES SECTION
+   ============================================= */
+.case-studies {
+    background: var(--dark-bg);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.case-studies::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(0, 212, 170, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.case-study-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all var(--transition-normal);
+}
+
+.case-study-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.case-study-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.case-study-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: rgba(6, 104, 225, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.case-study-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.case-study-header h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.case-study-section {
+    margin-bottom: 1.25rem;
+}
+
+.case-study-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.case-study-section h4 i {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+.case-study-section p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.case-study-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.case-study-section ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.case-study-section ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.case-study-lesson {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(0, 212, 170, 0.1);
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+.case-study-lesson i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+}
+
+.case-study-lesson span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.case-study-lesson strong {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   EXECUTIVE EXPERIENCE ROLE STYLES
+   ============================================= */
+.role-scope,
+.role-outcomes,
+.role-value {
+    margin-bottom: 1.5rem;
+}
+
+.role-scope h4,
+.role-outcomes h4,
+.role-value h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.role-scope h4 i,
+.role-outcomes h4 i,
+.role-value h4 i {
+    color: var(--primary-color);
+}
+
+.role-scope ul,
+.role-outcomes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role-scope li,
+.role-outcomes li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.role-scope li::before,
+.role-outcomes li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.role-outcomes li strong {
+    color: var(--primary-color);
+}
+
+.role-value p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.role-value strong {
+    color: var(--primary-color);
+}
+
+.prior-roles-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.prior-roles-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.prior-roles-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.timeline-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* =============================================
+   LEADERSHIP APPROACH & ACTION STYLES
+   ============================================= */
+.leadership-approach {
+    margin-bottom: 3rem;
+}
+
+.approach-title,
+.action-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.approach-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all var(--transition-normal);
+}
+
+.approach-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+.approach-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(6, 104, 225, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.approach-icon i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.approach-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.approach-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.leadership-action {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.action-stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.action-story {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.action-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(0, 212, 170, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.action-icon i {
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+.action-content h4 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+}
+
+.action-content p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-stories {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   ARTICLE EXECUTIVE TAKEAWAY
+   ============================================= */
+.article-executive-takeaway {
+    background: rgba(6, 104, 225, 0.1);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.article-executive-takeaway strong {
+    color: var(--primary-color);
+}
+
+/* =============================================
+   HERO TITLE SECONDARY STYLE
+   ============================================= */
+.title-secondary {
+    font-size: 0.75em;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* =============================================
    LEADERSHIP PHILOSOPHY SECTION (continued)
    ============================================= */
 .leadership {
